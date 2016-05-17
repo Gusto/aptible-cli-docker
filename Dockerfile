@@ -1,6 +1,7 @@
-FROM ruby:2.3.1-alpine
+FROM ruby:2.3.1
 
 RUN gem install aptible-cli
 
-ENTRYPOINT aptible
+ENTRYPOINT ["aptible"]
+CMD ["help"]
 
