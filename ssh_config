@@ -1,0 +1,5 @@
+UseRoaming no
+
+Host *
+  TCPKeepAlive yes
+  ServerAliveInterval 60
