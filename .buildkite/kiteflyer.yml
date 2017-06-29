@@ -1,11 +1,11 @@
 aptible-cli:
   setup:
-    base:
+    docker:
       cache_keys:
         - Dockerfile
       docker_build:
         dockerfile: Dockerfile
-        tag: gusto/aptible-cli-docker:latest
+        tag: gusto/aptible-cli-docker:$BUILDKITE_COMMIT
       artifacts:
-        - name: gusto/aptible-cli-docker:latest
+        - name: gusto/aptible-cli-docker:$BUILDKITE_COMMIT
           type: docker
