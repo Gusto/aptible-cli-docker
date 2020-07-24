@@ -1,9 +1,9 @@
-FROM debian:8.8
+FROM debian:8.10
 
 COPY ssh_config /etc/ssh/ssh_config
 
 # Found at: https://www.aptible.com/support/toolbelt/#download-debian
-ENV URL "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/143/pkg/aptible-toolbelt_0.11.0%2B20170530075203%7Edebian.8.6-1_amd64.deb"
+ENV URL "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/206/pkg/aptible-toolbelt_0.16.5%2B20200508143650~debian.8.10-1_amd64.deb"
 RUN apt-get update \
     && apt-get install -y curl \
     && curl -o aptible-cli.deb "$URL" \
