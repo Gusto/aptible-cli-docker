@@ -11,5 +11,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f aptible-cli.deb
 
+# Used to simplify docker run commands needing the login
+COPY run_with_login .
+
 ENTRYPOINT ["aptible"]
 CMD ["help"]

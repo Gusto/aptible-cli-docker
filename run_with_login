@@ -1,0 +1,7 @@
+#! /bin/sh
+
+: "${APTIBLE_USERNAME?Need to set environment APTIBLE_USERNAME}"
+: "${APTIBLE_PASSWORD?Need to set environment APTIBLE_PASSWORD}"
+
+aptible login --email $APTIBLE_USERNAME --password $APTIBLE_PASSWORD
+aptible "$@"
