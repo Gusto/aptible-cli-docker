@@ -1,4 +1,5 @@
 FROM debian:8.10
+WORKDIR /usr/src
 
 COPY ssh_config /etc/ssh/ssh_config
 
