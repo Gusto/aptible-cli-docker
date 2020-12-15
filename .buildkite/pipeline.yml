@@ -1,5 +1,5 @@
 steps:
   - label: ":docker: build image"
     command:
-      - docker build -t gusto/aptible-cli-docker:$BUILDKITE_COMMIT .
-      - docker push gusto/aptible-cli-docker:$BUILDKITE_COMMIT
+      - docker build -t aptible-cli-docker:$BUILDKITE_COMMIT .
+      - docker push 226779328744.dkr.ecr.us-west-2.amazonaws.com/aptible-cli-docker:$BUILDKITE_COMMIT
