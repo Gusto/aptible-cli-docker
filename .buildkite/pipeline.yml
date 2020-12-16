@@ -1,5 +1,10 @@
 steps:
   - label: ":docker: build image"
     command:
-      - docker build -t aptible-cli-docker:$BUILDKITE_COMMIT .
+      - docker build -t 226779328744.dkr.ecr.us-west-2.amazonaws.com/aptible-cli-docker:$BUILDKITE_COMMIT .
       - docker push 226779328744.dkr.ecr.us-west-2.amazonaws.com/aptible-cli-docker:$BUILDKITE_COMMIT
+    plugins:
+      - ecr#v2.0.0:
+          login: true
+          no-include-email: true
+          region: us-west-2
